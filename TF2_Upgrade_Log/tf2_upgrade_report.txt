@@ -1,0 +1,632 @@
+TensorFlow 2.0 Upgrade Script
+-----------------------------
+Converted 46 files
+Detected 24 issues that require attention
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+File: Codes/models.py
+--------------------------------------------------------------------------------
+Codes/models.py:12:7: ERROR: Using member tf.contrib.slim in deprecated module tf.contrib. tf.contrib.slim cannot be converted automatically. tf.contrib will not be distributed with TensorFlow 2.0, please consider an alternative in non-contrib TensorFlow, a community-maintained repository such as tensorflow/addons, or fork the required code.
+--------------------------------------------------------------------------------
+File: Codes/utils.py
+--------------------------------------------------------------------------------
+Codes/utils.py:156:4: WARNING: *.save requires manual check. (This warning is only applicable if the code saves a tf.Keras model) Keras model.save now saves to the Tensorflow SavedModel format by default, instead of HDF5. To continue saving to HDF5, add the argument save_format='h5' to the save() function.
+--------------------------------------------------------------------------------
+File: Codes/train.py
+--------------------------------------------------------------------------------
+Codes/train.py:42:15: WARNING: Changing dataset.make_one_shot_iterator() to tf.compat.v1.data.make_one_shot_iterator(dataset). Please check this transformation.
+
+Codes/train.py:54:14: WARNING: Changing dataset.make_one_shot_iterator() to tf.compat.v1.data.make_one_shot_iterator(dataset). Please check this transformation.
+
+--------------------------------------------------------------------------------
+File: Codes/inference.py
+--------------------------------------------------------------------------------
+Codes/inference.py:14:7: ERROR: Using member tf.contrib.slim in deprecated module tf.contrib. tf.contrib.slim cannot be converted automatically. tf.contrib will not be distributed with TensorFlow 2.0, please consider an alternative in non-contrib TensorFlow, a community-maintained repository such as tensorflow/addons, or fork the required code.
+--------------------------------------------------------------------------------
+File: Codes/pix2pix.py
+--------------------------------------------------------------------------------
+Codes/pix2pix.py:29:9: ERROR: Using member tf.contrib.layers in deprecated module tf.contrib. tf.contrib.layers cannot be converted automatically. tf.contrib will not be distributed with TensorFlow 2.0, please consider an alternative in non-contrib TensorFlow, a community-maintained repository such as tensorflow/addons, or fork the required code.
+Codes/pix2pix.py:46:9: ERROR: Using member tf.contrib.framework.arg_scope in deprecated module tf.contrib. tf.contrib.framework.arg_scope cannot be converted automatically. tf.contrib will not be distributed with TensorFlow 2.0, please consider an alternative in non-contrib TensorFlow, a community-maintained repository such as tensorflow/addons, or fork the required code.
+Codes/pix2pix.py:154:13: ERROR: Using member tf.contrib.framework.arg_scope in deprecated module tf.contrib. tf.contrib.framework.arg_scope cannot be converted automatically. tf.contrib will not be distributed with TensorFlow 2.0, please consider an alternative in non-contrib TensorFlow, a community-maintained repository such as tensorflow/addons, or fork the required code.
+Codes/pix2pix.py:185:13: ERROR: Using member tf.contrib.framework.arg_scope in deprecated module tf.contrib. tf.contrib.framework.arg_scope cannot be converted automatically. tf.contrib will not be distributed with TensorFlow 2.0, please consider an alternative in non-contrib TensorFlow, a community-maintained repository such as tensorflow/addons, or fork the required code.
+Codes/pix2pix.py:238:9: ERROR: Using member tf.contrib.framework.arg_scope in deprecated module tf.contrib. tf.contrib.framework.arg_scope cannot be converted automatically. tf.contrib will not be distributed with TensorFlow 2.0, please consider an alternative in non-contrib TensorFlow, a community-maintained repository such as tensorflow/addons, or fork the required code.
+--------------------------------------------------------------------------------
+File: Codes/flownet2/src/net.py
+--------------------------------------------------------------------------------
+Codes/flownet2/src/net.py:11:7: ERROR: Using member tf.contrib.slim in deprecated module tf.contrib. tf.contrib.slim cannot be converted automatically. tf.contrib will not be distributed with TensorFlow 2.0, please consider an alternative in non-contrib TensorFlow, a community-maintained repository such as tensorflow/addons, or fork the required code.
+Codes/flownet2/src/net.py:89:12: WARNING: *.save requires manual check. (This warning is only applicable if the code saves a tf.Keras model) Keras model.save now saves to the Tensorflow SavedModel format by default, instead of HDF5. To continue saving to HDF5, add the argument save_format='h5' to the save() function.
+--------------------------------------------------------------------------------
+File: Codes/flownet2/src/dataloader.py
+--------------------------------------------------------------------------------
+Codes/flownet2/src/dataloader.py:4:7: ERROR: Using member tf.contrib.slim in deprecated module tf.contrib. tf.contrib.slim cannot be converted automatically. tf.contrib will not be distributed with TensorFlow 2.0, please consider an alternative in non-contrib TensorFlow, a community-maintained repository such as tensorflow/addons, or fork the required code.
+Codes/flownet2/src/dataloader.py:179:20: ERROR: Using member tf.contrib.distributions.Bernoulli in deprecated module tf.contrib. tf.contrib.distributions.Bernoulli cannot be converted automatically. tf.contrib will not be distributed with TensorFlow 2.0, please consider an alternative in non-contrib TensorFlow, a community-maintained repository such as tensorflow/addons, or fork the required code.
+Codes/flownet2/src/dataloader.py:186:19: ERROR: Using member tf.contrib.distributions.Bernoulli in deprecated module tf.contrib. tf.contrib.distributions.Bernoulli cannot be converted automatically. tf.contrib will not be distributed with TensorFlow 2.0, please consider an alternative in non-contrib TensorFlow, a community-maintained repository such as tensorflow/addons, or fork the required code.
+Codes/flownet2/src/dataloader.py:204:19: ERROR: Using member tf.contrib.distributions.Bernoulli in deprecated module tf.contrib. tf.contrib.distributions.Bernoulli cannot be converted automatically. tf.contrib will not be distributed with TensorFlow 2.0, please consider an alternative in non-contrib TensorFlow, a community-maintained repository such as tensorflow/addons, or fork the required code.
+--------------------------------------------------------------------------------
+File: Codes/flownet2/src/flownet_s/flownet_s.py
+--------------------------------------------------------------------------------
+Codes/flownet2/src/flownet_s/flownet_s.py:6:7: ERROR: Using member tf.contrib.slim in deprecated module tf.contrib. tf.contrib.slim cannot be converted automatically. tf.contrib will not be distributed with TensorFlow 2.0, please consider an alternative in non-contrib TensorFlow, a community-maintained repository such as tensorflow/addons, or fork the required code.
+Codes/flownet2/src/flownet_s/flownet_s.py:109:27: WARNING: tf.image.resize_bilinear called with align_corners argument, requires manual check: align_corners is not supported by tf.image.resize, the new default transformation is close to what v1 provided. If you require exactly the same transformation as before, use compat.v1.image.resize_bilinear.
+--------------------------------------------------------------------------------
+File: Codes/flownet2/src/flownet2/flownet2.py
+--------------------------------------------------------------------------------
+Codes/flownet2/src/flownet2/flownet2.py:8:7: ERROR: Using member tf.contrib.slim in deprecated module tf.contrib. tf.contrib.slim cannot be converted automatically. tf.contrib will not be distributed with TensorFlow 2.0, please consider an alternative in non-contrib TensorFlow, a community-maintained repository such as tensorflow/addons, or fork the required code.
+Codes/flownet2/src/flownet2/flownet2.py:100:27: WARNING: tf.image.resize_bilinear called with align_corners argument, requires manual check: align_corners is not supported by tf.image.resize, the new default transformation is close to what v1 provided. If you require exactly the same transformation as before, use compat.v1.image.resize_bilinear.
+--------------------------------------------------------------------------------
+File: Codes/flownet2/src/flownet_sd/flownet_sd.py
+--------------------------------------------------------------------------------
+Codes/flownet2/src/flownet_sd/flownet_sd.py:6:7: ERROR: Using member tf.contrib.slim in deprecated module tf.contrib. tf.contrib.slim cannot be converted automatically. tf.contrib will not be distributed with TensorFlow 2.0, please consider an alternative in non-contrib TensorFlow, a community-maintained repository such as tensorflow/addons, or fork the required code.
+Codes/flownet2/src/flownet_sd/flownet_sd.py:108:27: WARNING: tf.image.resize_bilinear called with align_corners argument, requires manual check: align_corners is not supported by tf.image.resize, the new default transformation is close to what v1 provided. If you require exactly the same transformation as before, use compat.v1.image.resize_bilinear.
+--------------------------------------------------------------------------------
+File: Codes/flownet2/src/flownet_c/flownet_c.py
+--------------------------------------------------------------------------------
+Codes/flownet2/src/flownet_c/flownet_c.py:7:7: ERROR: Using member tf.contrib.slim in deprecated module tf.contrib. tf.contrib.slim cannot be converted automatically. tf.contrib will not be distributed with TensorFlow 2.0, please consider an alternative in non-contrib TensorFlow, a community-maintained repository such as tensorflow/addons, or fork the required code.
+Codes/flownet2/src/flownet_c/flownet_c.py:115:27: WARNING: tf.image.resize_bilinear called with align_corners argument, requires manual check: align_corners is not supported by tf.image.resize, the new default transformation is close to what v1 provided. If you require exactly the same transformation as before, use compat.v1.image.resize_bilinear.
+================================================================================
+Detailed log follows:
+
+================================================================================
+================================================================================
+Input tree: 'Codes'
+================================================================================
+--------------------------------------------------------------------------------
+Processing file 'Codes/loss_functions.py'
+ outputting to 'Codes_tf2/loss_functions.py'
+--------------------------------------------------------------------------------
+
+44:20: INFO: Added keywords to args of function 'tf.nn.conv2d'
+44:20: INFO: Renamed keyword argument for tf.nn.conv2d from filter to filters
+45:20: INFO: Added keywords to args of function 'tf.nn.conv2d'
+45:20: INFO: Renamed keyword argument for tf.nn.conv2d from filter to filters
+46:19: INFO: Added keywords to args of function 'tf.nn.conv2d'
+46:19: INFO: Renamed keyword argument for tf.nn.conv2d from filter to filters
+47:19: INFO: Added keywords to args of function 'tf.nn.conv2d'
+47:19: INFO: Renamed keyword argument for tf.nn.conv2d from filter to filters
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+Processing file 'Codes/models.py'
+ outputting to 'Codes_tf2/models.py'
+--------------------------------------------------------------------------------
+
+12:7: ERROR: Using member tf.contrib.slim in deprecated module tf.contrib. tf.contrib.slim cannot be converted automatically. tf.contrib will not be distributed with TensorFlow 2.0, please consider an alternative in non-contrib TensorFlow, a community-maintained repository such as tensorflow/addons, or fork the required code.
+30:14: INFO: Renamed 'tf.image.resize_images' to 'tf.image.resize'
+31:14: INFO: Renamed 'tf.image.resize_images' to 'tf.image.resize'
+42:20: INFO: Renamed 'tf.train.Saver' to 'tf.compat.v1.train.Saver'
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+Processing file 'Codes/unet.py'
+ outputting to 'Codes_tf2/unet.py'
+--------------------------------------------------------------------------------
+
+
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+Processing file 'Codes/utils.py'
+ outputting to 'Codes_tf2/utils.py'
+--------------------------------------------------------------------------------
+
+105:16: INFO: Renamed 'tf.log' to 'tf.math.log'
+106:18: INFO: Renamed 'tf.log' to 'tf.math.log'
+124:17: INFO: Changed tf.to_float call to tf.cast(..., dtype=tf.float32).
+156:4: WARNING: *.save requires manual check. (This warning is only applicable if the code saves a tf.Keras model) Keras model.save now saves to the Tensorflow SavedModel format by default, instead of HDF5. To continue saving to HDF5, add the argument save_format='h5' to the save() function.
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+Processing file 'Codes/train.py'
+ outputting to 'Codes_tf2/train.py'
+--------------------------------------------------------------------------------
+
+38:5: INFO: `name` passed to `name_scope`. Because you may be re-entering an existing scope, it is not safe to convert automatically,  the v2 name_scope does not support re-entering scopes by name.
+
+38:5: INFO: Renamed 'tf.name_scope' to 'tf.compat.v1.name_scope'
+42:15: WARNING: Changing dataset.make_one_shot_iterator() to tf.compat.v1.data.make_one_shot_iterator(dataset). Please check this transformation.
+
+54:14: WARNING: Changing dataset.make_one_shot_iterator() to tf.compat.v1.data.make_one_shot_iterator(dataset). Please check this transformation.
+
+65:5: INFO: Renamed 'tf.variable_scope' to 'tf.compat.v1.variable_scope'
+66:33: INFO: Renamed 'tf.get_variable_scope' to 'tf.compat.v1.get_variable_scope'
+71:5: INFO: Renamed 'tf.variable_scope' to 'tf.compat.v1.variable_scope'
+72:32: INFO: Renamed 'tf.get_variable_scope' to 'tf.compat.v1.get_variable_scope'
+104:9: INFO: Renamed 'tf.variable_scope' to 'tf.compat.v1.variable_scope'
+106:9: INFO: Renamed 'tf.variable_scope' to 'tf.compat.v1.variable_scope'
+119:5: INFO: `name` passed to `name_scope`. Because you may be re-entering an existing scope, it is not safe to convert automatically,  the v2 name_scope does not support re-entering scopes by name.
+
+119:5: INFO: Renamed 'tf.name_scope' to 'tf.compat.v1.name_scope'
+123:14: INFO: Renamed 'tf.train.piecewise_constant' to 'tf.compat.v1.train.piecewise_constant'
+124:18: INFO: Renamed 'tf.train.AdamOptimizer' to 'tf.compat.v1.train.AdamOptimizer'
+125:13: INFO: Renamed 'tf.get_collection' to 'tf.compat.v1.get_collection'
+125:35: INFO: Renamed 'tf.GraphKeys' to 'tf.compat.v1.GraphKeys'
+132:18: INFO: Renamed 'tf.train.piecewise_constant' to 'tf.compat.v1.train.piecewise_constant'
+133:22: INFO: Renamed 'tf.train.AdamOptimizer' to 'tf.compat.v1.train.AdamOptimizer'
+134:17: INFO: Renamed 'tf.get_collection' to 'tf.compat.v1.get_collection'
+134:39: INFO: Renamed 'tf.GraphKeys' to 'tf.compat.v1.GraphKeys'
+143:0: INFO: tf.summary.scalar requires manual check. The TF 1.x summary API cannot be automatically migrated to TF 2.0, so symbols have been converted to tf.compat.v1.summary.* and must be migrated manually. Typical usage will only require changes to the summary writing logic, not to individual calls like scalar(). For examples of the new summary API, see the Effective TF 2.0 migration document or check the TF 2.0 TensorBoard tutorials.
+143:0: INFO: Renamed 'tf.summary.scalar' to 'tf.compat.v1.summary.scalar'
+144:0: INFO: tf.summary.scalar requires manual check. The TF 1.x summary API cannot be automatically migrated to TF 2.0, so symbols have been converted to tf.compat.v1.summary.* and must be migrated manually. Typical usage will only require changes to the summary writing logic, not to individual calls like scalar(). For examples of the new summary API, see the Effective TF 2.0 migration document or check the TF 2.0 TensorBoard tutorials.
+144:0: INFO: Renamed 'tf.summary.scalar' to 'tf.compat.v1.summary.scalar'
+145:0: INFO: tf.summary.scalar requires manual check. The TF 1.x summary API cannot be automatically migrated to TF 2.0, so symbols have been converted to tf.compat.v1.summary.* and must be migrated manually. Typical usage will only require changes to the summary writing logic, not to individual calls like scalar(). For examples of the new summary API, see the Effective TF 2.0 migration document or check the TF 2.0 TensorBoard tutorials.
+145:0: INFO: Renamed 'tf.summary.scalar' to 'tf.compat.v1.summary.scalar'
+146:0: INFO: tf.summary.scalar requires manual check. The TF 1.x summary API cannot be automatically migrated to TF 2.0, so symbols have been converted to tf.compat.v1.summary.* and must be migrated manually. Typical usage will only require changes to the summary writing logic, not to individual calls like scalar(). For examples of the new summary API, see the Effective TF 2.0 migration document or check the TF 2.0 TensorBoard tutorials.
+146:0: INFO: Renamed 'tf.summary.scalar' to 'tf.compat.v1.summary.scalar'
+147:0: INFO: tf.summary.scalar requires manual check. The TF 1.x summary API cannot be automatically migrated to TF 2.0, so symbols have been converted to tf.compat.v1.summary.* and must be migrated manually. Typical usage will only require changes to the summary writing logic, not to individual calls like scalar(). For examples of the new summary API, see the Effective TF 2.0 migration document or check the TF 2.0 TensorBoard tutorials.
+147:0: INFO: Renamed 'tf.summary.scalar' to 'tf.compat.v1.summary.scalar'
+148:0: INFO: tf.summary.image requires manual check. The TF 1.x summary API cannot be automatically migrated to TF 2.0, so symbols have been converted to tf.compat.v1.summary.* and must be migrated manually. Typical usage will only require changes to the summary writing logic, not to individual calls like scalar(). For examples of the new summary API, see the Effective TF 2.0 migration document or check the TF 2.0 TensorBoard tutorials.
+148:0: INFO: Renamed 'tf.summary.image' to 'tf.compat.v1.summary.image'
+149:0: INFO: tf.summary.image requires manual check. The TF 1.x summary API cannot be automatically migrated to TF 2.0, so symbols have been converted to tf.compat.v1.summary.* and must be migrated manually. Typical usage will only require changes to the summary writing logic, not to individual calls like scalar(). For examples of the new summary API, see the Effective TF 2.0 migration document or check the TF 2.0 TensorBoard tutorials.
+149:0: INFO: Renamed 'tf.summary.image' to 'tf.compat.v1.summary.image'
+150:0: INFO: tf.summary.image requires manual check. The TF 1.x summary API cannot be automatically migrated to TF 2.0, so symbols have been converted to tf.compat.v1.summary.* and must be migrated manually. Typical usage will only require changes to the summary writing logic, not to individual calls like scalar(). For examples of the new summary API, see the Effective TF 2.0 migration document or check the TF 2.0 TensorBoard tutorials.
+150:0: INFO: Renamed 'tf.summary.image' to 'tf.compat.v1.summary.image'
+151:0: INFO: tf.summary.image requires manual check. The TF 1.x summary API cannot be automatically migrated to TF 2.0, so symbols have been converted to tf.compat.v1.summary.* and must be migrated manually. Typical usage will only require changes to the summary writing logic, not to individual calls like scalar(). For examples of the new summary API, see the Effective TF 2.0 migration document or check the TF 2.0 TensorBoard tutorials.
+151:0: INFO: Renamed 'tf.summary.image' to 'tf.compat.v1.summary.image'
+152:13: INFO: tf.summary.merge_all requires manual check. The TF 1.x summary API cannot be automatically migrated to TF 2.0, so symbols have been converted to tf.compat.v1.summary.* and must be migrated manually. Typical usage will only require changes to the summary writing logic, not to individual calls like scalar(). For examples of the new summary API, see the Effective TF 2.0 migration document or check the TF 2.0 TensorBoard tutorials.
+152:13: INFO: Renamed 'tf.summary.merge_all' to 'tf.compat.v1.summary.merge_all'
+154:9: INFO: Renamed 'tf.ConfigProto' to 'tf.compat.v1.ConfigProto'
+156:5: INFO: Renamed 'tf.Session' to 'tf.compat.v1.Session'
+158:21: INFO: tf.summary.FileWriter requires manual check. The TF 1.x summary API cannot be automatically migrated to TF 2.0, so symbols have been converted to tf.compat.v1.summary.* and must be migrated manually. Typical usage will only require changes to the summary writing logic, not to individual calls like scalar(). For examples of the new summary API, see the Effective TF 2.0 migration document or check the TF 2.0 TensorBoard tutorials.
+158:21: INFO: Renamed 'tf.summary.FileWriter' to 'tf.compat.v1.summary.FileWriter'
+161:13: INFO: Renamed 'tf.global_variables_initializer' to 'tf.compat.v1.global_variables_initializer'
+169:12: INFO: Renamed 'tf.train.Saver' to 'tf.compat.v1.train.Saver'
+169:36: INFO: Renamed 'tf.global_variables' to 'tf.compat.v1.global_variables'
+170:30: INFO: Renamed 'tf.global_variables' to 'tf.compat.v1.global_variables'
+171:13: INFO: Renamed 'tf.train.Saver' to 'tf.compat.v1.train.Saver'
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+Processing file 'Codes/inference.py'
+ outputting to 'Codes_tf2/inference.py'
+--------------------------------------------------------------------------------
+
+14:7: ERROR: Using member tf.contrib.slim in deprecated module tf.contrib. tf.contrib.slim cannot be converted automatically. tf.contrib will not be distributed with TensorFlow 2.0, please consider an alternative in non-contrib TensorFlow, a community-maintained repository such as tensorflow/addons, or fork the required code.
+34:5: INFO: `name` passed to `name_scope`. Because you may be re-entering an existing scope, it is not safe to convert automatically,  the v2 name_scope does not support re-entering scopes by name.
+
+34:5: INFO: Renamed 'tf.name_scope' to 'tf.compat.v1.name_scope'
+35:30: INFO: Renamed 'tf.placeholder' to 'tf.compat.v1.placeholder'
+44:5: INFO: Renamed 'tf.variable_scope' to 'tf.compat.v1.variable_scope'
+45:32: INFO: Renamed 'tf.get_variable_scope' to 'tf.compat.v1.get_variable_scope'
+50:9: INFO: Renamed 'tf.ConfigProto' to 'tf.compat.v1.ConfigProto'
+52:5: INFO: Renamed 'tf.Session' to 'tf.compat.v1.Session'
+57:13: INFO: Renamed 'tf.global_variables_initializer' to 'tf.compat.v1.global_variables_initializer'
+61:12: INFO: Renamed 'tf.train.Saver' to 'tf.compat.v1.train.Saver'
+61:36: INFO: Renamed 'tf.global_variables' to 'tf.compat.v1.global_variables'
+63:30: INFO: Renamed 'tf.global_variables' to 'tf.compat.v1.global_variables'
+64:13: INFO: Renamed 'tf.train.Saver' to 'tf.compat.v1.train.Saver'
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+Processing file 'Codes/evaluate.py'
+ outputting to 'Codes_tf2/evaluate.py'
+--------------------------------------------------------------------------------
+
+
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+Processing file 'Codes/constant.py'
+ outputting to 'Codes_tf2/constant.py'
+--------------------------------------------------------------------------------
+
+
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+Processing file 'Codes/pix2pix.py'
+ outputting to 'Codes_tf2/pix2pix.py'
+--------------------------------------------------------------------------------
+
+29:9: ERROR: Using member tf.contrib.layers in deprecated module tf.contrib. tf.contrib.layers cannot be converted automatically. tf.contrib will not be distributed with TensorFlow 2.0, please consider an alternative in non-contrib TensorFlow, a community-maintained repository such as tensorflow/addons, or fork the required code.
+46:9: ERROR: Using member tf.contrib.framework.arg_scope in deprecated module tf.contrib. tf.contrib.framework.arg_scope cannot be converted automatically. tf.contrib will not be distributed with TensorFlow 2.0, please consider an alternative in non-contrib TensorFlow, a community-maintained repository such as tensorflow/addons, or fork the required code.
+50:32: INFO: tf.random_normal_initializer requires manual check. Initializers no longer have the dtype argument in the constructor or partition_info argument in the __call__ method.
+The calls have been converted to compat.v1 for safety (even though they may already have been correct).
+50:32: INFO: Renamed 'tf.random_normal_initializer' to 'tf.compat.v1.random_normal_initializer'
+74:14: INFO: Changed tf.image.resize_nearest_neighbor call to tf.image.resize(..., method=tf.image.ResizeMethod.NEAREST_NEIGHBOR).
+153:9: INFO: Renamed 'tf.variable_scope' to 'tf.compat.v1.variable_scope'
+154:13: ERROR: Using member tf.contrib.framework.arg_scope in deprecated module tf.contrib. tf.contrib.framework.arg_scope cannot be converted automatically. tf.contrib will not be distributed with TensorFlow 2.0, please consider an alternative in non-contrib TensorFlow, a community-maintained repository such as tensorflow/addons, or fork the required code.
+182:9: INFO: Renamed 'tf.variable_scope' to 'tf.compat.v1.variable_scope'
+185:13: ERROR: Using member tf.contrib.framework.arg_scope in deprecated module tf.contrib. tf.contrib.framework.arg_scope cannot be converted automatically. tf.contrib will not be distributed with TensorFlow 2.0, please consider an alternative in non-contrib TensorFlow, a community-maintained repository such as tensorflow/addons, or fork the required code.
+198:9: INFO: Renamed 'tf.variable_scope' to 'tf.compat.v1.variable_scope'
+230:17: INFO: Renamed 'tf.variable_scope' to 'tf.compat.v1.variable_scope'
+238:9: ERROR: Using member tf.contrib.framework.arg_scope in deprecated module tf.contrib. tf.contrib.framework.arg_scope cannot be converted automatically. tf.contrib will not be distributed with TensorFlow 2.0, please consider an alternative in non-contrib TensorFlow, a community-maintained repository such as tensorflow/addons, or fork the required code.
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+Processing file 'Codes/flownet2/corr.py'
+ outputting to 'Codes_tf2/flownet2/corr.py'
+--------------------------------------------------------------------------------
+
+
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+Processing file 'Codes/flownet2/__init__.py'
+ outputting to 'Codes_tf2/flownet2/__init__.py'
+--------------------------------------------------------------------------------
+
+
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+Processing file 'Codes/flownet2/test.py'
+ outputting to 'Codes_tf2/flownet2/test.py'
+--------------------------------------------------------------------------------
+
+11:4: INFO: Renamed 'tf.resource_loader.get_path_to_datafile' to 'tf.compat.v1.resource_loader.get_path_to_datafile'
+56:9: INFO: Renamed 'tf.Session' to 'tf.compat.v1.Session'
+62:40: INFO: Changed tf.to_float call to tf.cast(..., dtype=tf.float32).
+63:40: INFO: Changed tf.to_float call to tf.cast(..., dtype=tf.float32).
+88:37: INFO: Changed tf.to_float call to tf.cast(..., dtype=tf.float32).
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+Processing file 'Codes/flownet2/src/flowlib.py'
+ outputting to 'Codes_tf2/flownet2/src/flowlib.py'
+--------------------------------------------------------------------------------
+
+296:8: INFO: Renamed 'tf.where' to 'tf.compat.v1.where'
+297:8: INFO: Renamed 'tf.where' to 'tf.compat.v1.where'
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+Processing file 'Codes/flownet2/src/downsample.py'
+ outputting to 'Codes_tf2/flownet2/src/downsample.py'
+--------------------------------------------------------------------------------
+
+4:4: INFO: Renamed 'tf.resource_loader.get_path_to_datafile' to 'tf.compat.v1.resource_loader.get_path_to_datafile'
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+Processing file 'Codes/flownet2/src/net.py'
+ outputting to 'Codes_tf2/flownet2/src/net.py'
+--------------------------------------------------------------------------------
+
+11:7: ERROR: Using member tf.contrib.slim in deprecated module tf.contrib. tf.contrib.slim cannot be converted automatically. tf.contrib will not be distributed with TensorFlow 2.0, please consider an alternative in non-contrib TensorFlow, a community-maintained repository such as tensorflow/addons, or fork the required code.
+81:16: INFO: Renamed 'tf.train.Saver' to 'tf.compat.v1.train.Saver'
+83:17: INFO: Renamed 'tf.ConfigProto' to 'tf.compat.v1.ConfigProto'
+85:13: INFO: Renamed 'tf.Session' to 'tf.compat.v1.Session'
+89:12: WARNING: *.save requires manual check. (This warning is only applicable if the code saves a tf.Keras model) Keras model.save now saves to the Tensorflow SavedModel format by default, instead of HDF5. To continue saving to HDF5, add the argument save_format='h5' to the save() function.
+102:8: INFO: tf.summary.image requires manual check. The TF 1.x summary API cannot be automatically migrated to TF 2.0, so symbols have been converted to tf.compat.v1.summary.* and must be migrated manually. Typical usage will only require changes to the summary writing logic, not to individual calls like scalar(). For examples of the new summary API, see the Effective TF 2.0 migration document or check the TF 2.0 TensorBoard tutorials.
+102:8: INFO: Renamed 'tf.summary.image' to 'tf.compat.v1.summary.image'
+103:8: INFO: tf.summary.image requires manual check. The TF 1.x summary API cannot be automatically migrated to TF 2.0, so symbols have been converted to tf.compat.v1.summary.* and must be migrated manually. Typical usage will only require changes to the summary writing logic, not to individual calls like scalar(). For examples of the new summary API, see the Effective TF 2.0 migration document or check the TF 2.0 TensorBoard tutorials.
+103:8: INFO: Renamed 'tf.summary.image' to 'tf.compat.v1.summary.image'
+105:29: INFO: Renamed 'tf.train.piecewise_constant' to 'tf.compat.v1.train.piecewise_constant'
+110:20: INFO: Renamed 'tf.train.AdamOptimizer' to 'tf.compat.v1.train.AdamOptimizer'
+121:8: INFO: tf.summary.scalar requires manual check. The TF 1.x summary API cannot be automatically migrated to TF 2.0, so symbols have been converted to tf.compat.v1.summary.* and must be migrated manually. Typical usage will only require changes to the summary writing logic, not to individual calls like scalar(). For examples of the new summary API, see the Effective TF 2.0 migration document or check the TF 2.0 TensorBoard tutorials.
+121:8: INFO: Renamed 'tf.summary.scalar' to 'tf.compat.v1.summary.scalar'
+130:27: INFO: Renamed 'tf.train.Saver' to 'tf.compat.v1.train.Saver'
+131:21: INFO: Renamed 'tf.Session' to 'tf.compat.v1.Session'
+137:26: INFO: Renamed 'tf.py_func' to 'tf.compat.v1.py_func'
+139:26: INFO: Renamed 'tf.py_func' to 'tf.compat.v1.py_func'
+141:12: INFO: tf.summary.image requires manual check. The TF 1.x summary API cannot be automatically migrated to TF 2.0, so symbols have been converted to tf.compat.v1.summary.* and must be migrated manually. Typical usage will only require changes to the summary writing logic, not to individual calls like scalar(). For examples of the new summary API, see the Effective TF 2.0 migration document or check the TF 2.0 TensorBoard tutorials.
+141:12: INFO: Renamed 'tf.summary.image' to 'tf.compat.v1.summary.image'
+144:22: INFO: Renamed 'tf.py_func' to 'tf.compat.v1.py_func'
+146:22: INFO: Renamed 'tf.py_func' to 'tf.compat.v1.py_func'
+148:8: INFO: tf.summary.image requires manual check. The TF 1.x summary API cannot be automatically migrated to TF 2.0, so symbols have been converted to tf.compat.v1.summary.* and must be migrated manually. Typical usage will only require changes to the summary writing logic, not to individual calls like scalar(). For examples of the new summary API, see the Effective TF 2.0 migration document or check the TF 2.0 TensorBoard tutorials.
+148:8: INFO: Renamed 'tf.summary.image' to 'tf.compat.v1.summary.image'
+156:17: INFO: Renamed 'tf.Session' to 'tf.compat.v1.Session'
+157:25: INFO: Renamed 'tf.global_variables_initializer' to 'tf.compat.v1.global_variables_initializer'
+158:16: INFO: Renamed 'tf.train.start_queue_runners' to 'tf.compat.v1.train.start_queue_runners'
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+Processing file 'Codes/flownet2/src/flow_warp.py'
+ outputting to 'Codes_tf2/flownet2/src/flow_warp.py'
+--------------------------------------------------------------------------------
+
+4:4: INFO: Renamed 'tf.resource_loader.get_path_to_datafile' to 'tf.compat.v1.resource_loader.get_path_to_datafile'
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+Processing file 'Codes/flownet2/src/__init__.py'
+ outputting to 'Codes_tf2/flownet2/src/__init__.py'
+--------------------------------------------------------------------------------
+
+
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+Processing file 'Codes/flownet2/src/training_schedules.py'
+ outputting to 'Codes_tf2/flownet2/src/training_schedules.py'
+--------------------------------------------------------------------------------
+
+
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+Processing file 'Codes/flownet2/src/utils.py'
+ outputting to 'Codes_tf2/flownet2/src/utils.py'
+--------------------------------------------------------------------------------
+
+6:9: INFO: Renamed 'tf.variable_scope' to 'tf.compat.v1.variable_scope'
+18:9: INFO: Using default_name as name in call to name_scope.
+
+19:22: INFO: Changed tf.to_float call to tf.cast(..., dtype=tf.float32).
+20:17: INFO: Changed tf.to_float call to tf.cast(..., dtype=tf.float32).
+25:52: INFO: Renamed keyword argument for tf.reduce_sum from keep_dims to keepdims
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+Processing file 'Codes/flownet2/src/dataloader.py'
+ outputting to 'Codes_tf2/flownet2/src/dataloader.py'
+--------------------------------------------------------------------------------
+
+4:7: ERROR: Using member tf.contrib.slim in deprecated module tf.contrib. tf.contrib.slim cannot be converted automatically. tf.contrib will not be distributed with TensorFlow 2.0, please consider an alternative in non-contrib TensorFlow, a community-maintained repository such as tensorflow/addons, or fork the required code.
+7:4: INFO: Renamed 'tf.resource_loader.get_path_to_datafile' to 'tf.compat.v1.resource_loader.get_path_to_datafile'
+67:19: INFO: Renamed 'tf.decode_raw' to 'tf.io.decode_raw'
+82:9: INFO: `name` passed to `name_scope`. Because you may be re-entering an existing scope, it is not safe to convert automatically,  the v2 name_scope does not support re-entering scopes by name.
+
+82:9: INFO: Renamed 'tf.name_scope' to 'tf.compat.v1.name_scope'
+87:17: INFO: Renamed 'tf.TFRecordReader' to 'tf.compat.v1.TFRecordReader'
+89:23: INFO: Renamed 'tf.FixedLenFeature' to 'tf.io.FixedLenFeature'
+90:23: INFO: Renamed 'tf.FixedLenFeature' to 'tf.io.FixedLenFeature'
+91:20: INFO: Renamed 'tf.FixedLenFeature' to 'tf.io.FixedLenFeature'
+167:32: INFO: Renamed 'tf.random_uniform' to 'tf.random.uniform'
+173:32: INFO: Renamed 'tf.random_normal' to 'tf.random.normal'
+179:20: ERROR: Using member tf.contrib.distributions.Bernoulli in deprecated module tf.contrib. tf.contrib.distributions.Bernoulli cannot be converted automatically. tf.contrib will not be distributed with TensorFlow 2.0, please consider an alternative in non-contrib TensorFlow, a community-maintained repository such as tensorflow/addons, or fork the required code.
+186:19: ERROR: Using member tf.contrib.distributions.Bernoulli in deprecated module tf.contrib. tf.contrib.distributions.Bernoulli cannot be converted automatically. tf.contrib will not be distributed with TensorFlow 2.0, please consider an alternative in non-contrib TensorFlow, a community-maintained repository such as tensorflow/addons, or fork the required code.
+195:35: INFO: Renamed 'tf.random_uniform' to 'tf.random.uniform'
+204:19: ERROR: Using member tf.contrib.distributions.Bernoulli in deprecated module tf.contrib. tf.contrib.distributions.Bernoulli cannot be converted automatically. tf.contrib will not be distributed with TensorFlow 2.0, please consider an alternative in non-contrib TensorFlow, a community-maintained repository such as tensorflow/addons, or fork the required code.
+213:35: INFO: Renamed 'tf.random_normal' to 'tf.random.normal'
+225:32: INFO: Renamed 'tf.python_io.TFRecordOptions' to 'tf.io.TFRecordOptions'
+226:8: INFO: Renamed 'tf.python_io.TFRecordCompressionType' to 'tf.compat.v1.python_io.TFRecordCompressionType'
+228:9: INFO: `name` passed to `name_scope`. Because you may be re-entering an existing scope, it is not safe to convert automatically,  the v2 name_scope does not support re-entering scopes by name.
+
+228:9: INFO: Renamed 'tf.name_scope' to 'tf.compat.v1.name_scope'
+237:37: INFO: Renamed 'tf.to_float' to 'tf.compat.v1.to_float'
+288:26: INFO: Renamed 'tf.random_normal' to 'tf.random.normal'
+315:26: INFO: Renamed 'tf.random_normal' to 'tf.random.normal'
+324:19: INFO: Renamed 'tf.train.batch' to 'tf.compat.v1.train.batch'
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+Processing file 'Codes/flownet2/src/dataset_configs.py'
+ outputting to 'Codes_tf2/flownet2/src/dataset_configs.py'
+--------------------------------------------------------------------------------
+
+
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+Processing file 'Codes/flownet2/src/correlation.py'
+ outputting to 'Codes_tf2/flownet2/src/correlation.py'
+--------------------------------------------------------------------------------
+
+4:4: INFO: Renamed 'tf.resource_loader.get_path_to_datafile' to 'tf.compat.v1.resource_loader.get_path_to_datafile'
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+Processing file 'Codes/flownet2/src/flownet_s/flownet_s.py'
+ outputting to 'Codes_tf2/flownet2/src/flownet_s/flownet_s.py'
+--------------------------------------------------------------------------------
+
+6:7: ERROR: Using member tf.contrib.slim in deprecated module tf.contrib. tf.contrib.slim cannot be converted automatically. tf.contrib will not be distributed with TensorFlow 2.0, please consider an alternative in non-contrib TensorFlow, a community-maintained repository such as tensorflow/addons, or fork the required code.
+17:13: INFO: Renamed 'tf.variable_scope' to 'tf.compat.v1.variable_scope'
+31:52: INFO: Changing tf.contrib.layers.variance_scaling_initializer to a tf.compat.v1.keras.initializers.VarianceScaling and converting arguments.
+
+36:38: INFO: Multiplying scale arg of tf.contrib.layers.l2_regularizer by half to what tf.keras.regularizers.l2 expects.
+
+109:27: WARNING: tf.image.resize_bilinear called with align_corners argument, requires manual check: align_corners is not supported by tf.image.resize, the new default transformation is close to what v1 provided. If you require exactly the same transformation as before, use compat.v1.image.resize_bilinear.
+109:27: INFO: Changed tf.image.resize_bilinear call to tf.image.resize(..., method=tf.image.ResizeMethod.BILINEAR).
+158:15: INFO: tf.losses.compute_weighted_loss requires manual check. tf.losses have been replaced with object oriented versions in TF 2.0 and after. The loss function calls have been converted to compat.v1 for backward compatibility. Please update these calls to the TF 2.0 versions.
+158:15: INFO: Renamed 'tf.losses.compute_weighted_loss' to 'tf.compat.v1.losses.compute_weighted_loss'
+161:15: INFO: tf.losses.get_total_loss requires manual check. tf.losses have been replaced with object oriented versions in TF 2.0 and after. The loss function calls have been converted to compat.v1 for backward compatibility. Please update these calls to the TF 2.0 versions.
+161:15: INFO: Renamed 'tf.losses.get_total_loss' to 'tf.compat.v1.losses.get_total_loss'
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+Processing file 'Codes/flownet2/src/flownet_s/__init__.py'
+ outputting to 'Codes_tf2/flownet2/src/flownet_s/__init__.py'
+--------------------------------------------------------------------------------
+
+
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+Processing file 'Codes/flownet2/src/flownet_s/test.py'
+ outputting to 'Codes_tf2/flownet2/src/flownet_s/test.py'
+--------------------------------------------------------------------------------
+
+
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+Processing file 'Codes/flownet2/src/flownet_s/train.py'
+ outputting to 'Codes_tf2/flownet2/src/flownet_s/train.py'
+--------------------------------------------------------------------------------
+
+
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+Processing file 'Codes/flownet2/src/flownet_cs/__init__.py'
+ outputting to 'Codes_tf2/flownet2/src/flownet_cs/__init__.py'
+--------------------------------------------------------------------------------
+
+
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+Processing file 'Codes/flownet2/src/flownet_cs/test.py'
+ outputting to 'Codes_tf2/flownet2/src/flownet_cs/test.py'
+--------------------------------------------------------------------------------
+
+
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+Processing file 'Codes/flownet2/src/flownet_cs/flownet_cs.py'
+ outputting to 'Codes_tf2/flownet2/src/flownet_cs/flownet_cs.py'
+--------------------------------------------------------------------------------
+
+16:13: INFO: Renamed 'tf.variable_scope' to 'tf.compat.v1.variable_scope'
+26:63: INFO: Renamed keyword argument for tf.reduce_sum from keep_dims to keepdims
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+Processing file 'Codes/flownet2/src/flownet_cs/train.py'
+ outputting to 'Codes_tf2/flownet2/src/flownet_cs/train.py'
+--------------------------------------------------------------------------------
+
+
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+Processing file 'Codes/flownet2/src/flownet2/flownet2.py'
+ outputting to 'Codes_tf2/flownet2/src/flownet2/flownet2.py'
+--------------------------------------------------------------------------------
+
+8:7: ERROR: Using member tf.contrib.slim in deprecated module tf.contrib. tf.contrib.slim cannot be converted automatically. tf.contrib will not be distributed with TensorFlow 2.0, please consider an alternative in non-contrib TensorFlow, a community-maintained repository such as tensorflow/addons, or fork the required code.
+20:13: INFO: Renamed 'tf.variable_scope' to 'tf.compat.v1.variable_scope'
+27:42: INFO: Renamed keyword argument for tf.reduce_sum from keep_dims to keepdims
+54:52: INFO: Changing tf.contrib.layers.variance_scaling_initializer to a tf.compat.v1.keras.initializers.VarianceScaling and converting arguments.
+
+59:38: INFO: Multiplying scale arg of tf.contrib.layers.l2_regularizer by half to what tf.keras.regularizers.l2 expects.
+
+100:27: WARNING: tf.image.resize_bilinear called with align_corners argument, requires manual check: align_corners is not supported by tf.image.resize, the new default transformation is close to what v1 provided. If you require exactly the same transformation as before, use compat.v1.image.resize_bilinear.
+100:27: INFO: Changed tf.image.resize_bilinear call to tf.image.resize(..., method=tf.image.ResizeMethod.BILINEAR).
+115:8: INFO: tf.losses.add_loss requires manual check. tf.losses have been replaced with object oriented versions in TF 2.0 and after. The loss function calls have been converted to compat.v1 for backward compatibility. Please update these calls to the TF 2.0 versions.
+115:8: INFO: Renamed 'tf.losses.add_loss' to 'tf.compat.v1.losses.add_loss'
+118:15: INFO: tf.losses.get_total_loss requires manual check. tf.losses have been replaced with object oriented versions in TF 2.0 and after. The loss function calls have been converted to compat.v1 for backward compatibility. Please update these calls to the TF 2.0 versions.
+118:15: INFO: Renamed 'tf.losses.get_total_loss' to 'tf.compat.v1.losses.get_total_loss'
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+Processing file 'Codes/flownet2/src/flownet2/__init__.py'
+ outputting to 'Codes_tf2/flownet2/src/flownet2/__init__.py'
+--------------------------------------------------------------------------------
+
+
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+Processing file 'Codes/flownet2/src/flownet2/test.py'
+ outputting to 'Codes_tf2/flownet2/src/flownet2/test.py'
+--------------------------------------------------------------------------------
+
+
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+Processing file 'Codes/flownet2/src/flownet2/train.py'
+ outputting to 'Codes_tf2/flownet2/src/flownet2/train.py'
+--------------------------------------------------------------------------------
+
+
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+Processing file 'Codes/flownet2/src/flownet_sd/__init__.py'
+ outputting to 'Codes_tf2/flownet2/src/flownet_sd/__init__.py'
+--------------------------------------------------------------------------------
+
+
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+Processing file 'Codes/flownet2/src/flownet_sd/test.py'
+ outputting to 'Codes_tf2/flownet2/src/flownet_sd/test.py'
+--------------------------------------------------------------------------------
+
+
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+Processing file 'Codes/flownet2/src/flownet_sd/train.py'
+ outputting to 'Codes_tf2/flownet2/src/flownet_sd/train.py'
+--------------------------------------------------------------------------------
+
+
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+Processing file 'Codes/flownet2/src/flownet_sd/flownet_sd.py'
+ outputting to 'Codes_tf2/flownet2/src/flownet_sd/flownet_sd.py'
+--------------------------------------------------------------------------------
+
+6:7: ERROR: Using member tf.contrib.slim in deprecated module tf.contrib. tf.contrib.slim cannot be converted automatically. tf.contrib will not be distributed with TensorFlow 2.0, please consider an alternative in non-contrib TensorFlow, a community-maintained repository such as tensorflow/addons, or fork the required code.
+16:13: INFO: Renamed 'tf.variable_scope' to 'tf.compat.v1.variable_scope'
+22:52: INFO: Changing tf.contrib.layers.variance_scaling_initializer to a tf.compat.v1.keras.initializers.VarianceScaling and converting arguments.
+
+27:38: INFO: Multiplying scale arg of tf.contrib.layers.l2_regularizer by half to what tf.keras.regularizers.l2 expects.
+
+108:27: WARNING: tf.image.resize_bilinear called with align_corners argument, requires manual check: align_corners is not supported by tf.image.resize, the new default transformation is close to what v1 provided. If you require exactly the same transformation as before, use compat.v1.image.resize_bilinear.
+108:27: INFO: Changed tf.image.resize_bilinear call to tf.image.resize(..., method=tf.image.ResizeMethod.BILINEAR).
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+Processing file 'Codes/flownet2/src/flownet_css/__init__.py'
+ outputting to 'Codes_tf2/flownet2/src/flownet_css/__init__.py'
+--------------------------------------------------------------------------------
+
+
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+Processing file 'Codes/flownet2/src/flownet_css/test.py'
+ outputting to 'Codes_tf2/flownet2/src/flownet_css/test.py'
+--------------------------------------------------------------------------------
+
+
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+Processing file 'Codes/flownet2/src/flownet_css/train.py'
+ outputting to 'Codes_tf2/flownet2/src/flownet_css/train.py'
+--------------------------------------------------------------------------------
+
+
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+Processing file 'Codes/flownet2/src/flownet_css/flownet_css.py'
+ outputting to 'Codes_tf2/flownet2/src/flownet_css/flownet_css.py'
+--------------------------------------------------------------------------------
+
+16:13: INFO: Renamed 'tf.variable_scope' to 'tf.compat.v1.variable_scope'
+26:63: INFO: Renamed keyword argument for tf.reduce_sum from keep_dims to keepdims
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+Processing file 'Codes/flownet2/src/flownet_c/__init__.py'
+ outputting to 'Codes_tf2/flownet2/src/flownet_c/__init__.py'
+--------------------------------------------------------------------------------
+
+
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+Processing file 'Codes/flownet2/src/flownet_c/test.py'
+ outputting to 'Codes_tf2/flownet2/src/flownet_c/test.py'
+--------------------------------------------------------------------------------
+
+
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+Processing file 'Codes/flownet2/src/flownet_c/flownet_c.py'
+ outputting to 'Codes_tf2/flownet2/src/flownet_c/flownet_c.py'
+--------------------------------------------------------------------------------
+
+7:7: ERROR: Using member tf.contrib.slim in deprecated module tf.contrib. tf.contrib.slim cannot be converted automatically. tf.contrib will not be distributed with TensorFlow 2.0, please consider an alternative in non-contrib TensorFlow, a community-maintained repository such as tensorflow/addons, or fork the required code.
+17:13: INFO: Renamed 'tf.variable_scope' to 'tf.compat.v1.variable_scope'
+22:52: INFO: Changing tf.contrib.layers.variance_scaling_initializer to a tf.compat.v1.keras.initializers.VarianceScaling and converting arguments.
+
+27:38: INFO: Multiplying scale arg of tf.contrib.layers.l2_regularizer by half to what tf.keras.regularizers.l2 expects.
+
+115:27: WARNING: tf.image.resize_bilinear called with align_corners argument, requires manual check: align_corners is not supported by tf.image.resize, the new default transformation is close to what v1 provided. If you require exactly the same transformation as before, use compat.v1.image.resize_bilinear.
+115:27: INFO: Changed tf.image.resize_bilinear call to tf.image.resize(..., method=tf.image.ResizeMethod.BILINEAR).
+164:15: INFO: tf.losses.compute_weighted_loss requires manual check. tf.losses have been replaced with object oriented versions in TF 2.0 and after. The loss function calls have been converted to compat.v1 for backward compatibility. Please update these calls to the TF 2.0 versions.
+164:15: INFO: Renamed 'tf.losses.compute_weighted_loss' to 'tf.compat.v1.losses.compute_weighted_loss'
+167:15: INFO: tf.losses.get_total_loss requires manual check. tf.losses have been replaced with object oriented versions in TF 2.0 and after. The loss function calls have been converted to compat.v1 for backward compatibility. Please update these calls to the TF 2.0 versions.
+167:15: INFO: Renamed 'tf.losses.get_total_loss' to 'tf.compat.v1.losses.get_total_loss'
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+Processing file 'Codes/flownet2/src/flownet_c/train.py'
+ outputting to 'Codes_tf2/flownet2/src/flownet_c/train.py'
+--------------------------------------------------------------------------------
+
+
+--------------------------------------------------------------------------------
+
